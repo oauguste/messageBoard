@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  h1= title
+  p Write a post
+  form(action="/new", method="post")
+    div.form-group
+        label(for="author") Name: 
+        input(type="text", name='author',placeholder="name")
+    div.form-group
+        label(for="message") Post: 
+        input(type="text", name='message',placeholder="message")
+    button(type="submit" name='sumbit') Submit
+    button(type="button" name='cancel') cancel
